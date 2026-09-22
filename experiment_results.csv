@@ -1,0 +1,6 @@
+experiment,params,val_mse,val_rmse,cv_mse,cv_std,source,notes
+baseline_tree,defaults,0.052966955410212124,0.23014550921148152,0.04635088122036777,0.006155938149663118,--,"unconstrained growth -> near-pure leaves, overfits"
+pruned_tree_ccp,ccp_alpha=4.420e-04,0.04445151774533852,0.2108352858165315,0.03923541749864401,0.003671670272086813,ISLP Alg. 8.1,grow large -> cost-complexity path -> CV-select alpha
+pretuned_tree,"{'max_depth': 10, 'min_samples_leaf': 15, 'min_samples_split': 2}",0.03878664172945107,0.19694324494496143,0.034728104293637554,0.003963503244995771,Geron Ch.6 + Ch.2,GridSearchCV over max_depth/min_samples_leaf/min_samples_split
+random_forest,"n_estimators=500, max_features=p/3",0.024469413454036432,0.15642702277431617,0.019126370566343462,0.004517116068509982,ISLP 8.2.1-8.2.2,bootstrap + decorrelation via m-subsetting
+gradient_boosting,"B=1000, lr=0.05, max_depth=3, subsample=0.8",0.018229854549950002,0.13501797861747894,0.0166758677385481,0.006087280709368196,ISLP 8.2.3 + Geron Ch.7,shrinkage + interaction depth by CV; B by staged_predict early stopping

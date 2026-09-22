@@ -1,0 +1,3 @@
+# Ignore local training, test, and other dataset files
+*
+!.gitignore
