@@ -1,0 +1,10 @@
+# Local dataset files
+/data/raw/
+
+# Python environments and generated files
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+
+# Local Kaggle credentials
+kaggle.json
